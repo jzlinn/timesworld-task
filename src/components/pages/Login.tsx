@@ -7,39 +7,36 @@ import "../css/styles.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const usernameRef: any = useRef<HTMLInputElement>(null);
-  const passwordRef: any = useRef<HTMLInputElement>(null);
+  const usernameRef: any = useRef();
+  const passwordRef: any = useRef();
 
   const [userName, setUserName] = useState<string>("");
   const [userPassword, setUserPassword] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [validated, setValidated] = useState<boolean>(false);
 
-  const authenticateUser = () => {
+  const handleSubmit = (event: any) => {
+    const form = event.currentTarget;
+    event.preventDefault();
+    event.stopPropagation();
     if (userName.length > 5) {
-      if (userPassword.length > 6) {
+      if (userPassword.length > 5) {
+        setValidated(true);
         navigate("/home");
       } else {
+        setErrorMessage("Password must be 6 letters or more");
         passwordRef?.current?.focus();
       }
     } else {
       usernameRef?.current?.focus();
+      setErrorMessage("Username must be 6 letters or more");
     }
-  };
-
-  const handleSubmit = (event: any) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    setValidated(true);
-    navigate("/home");
   };
 
   return (
     <Container fluid className="main-container">
-      <Row>
-        <Col xs={0} lg={1}></Col>
+        <Row className="justify-content-md-center">
+        <Col xs={1} lg={1}></Col>
         <Col xs={10} lg={4} className="central-div">
           <div className="login-card central-div">
             <h4>Sign In</h4>
@@ -60,9 +57,6 @@ const LoginPage = () => {
                       className="custom-input"
                       onChange={(event) => setUserName(event.target.value)}
                     />
-                    <Form.Control.Feedback type="invalid">
-                      Username must be 6 letters or more
-                    </Form.Control.Feedback>
                   </Form.Group>
                 </div>
 
@@ -78,9 +72,6 @@ const LoginPage = () => {
                       onChange={(event) => setUserPassword(event.target.value)}
                       required
                     />
-                    <Form.Control.Feedback type="invalid">
-                      Password must be 6 letters or more
-                    </Form.Control.Feedback>
                   </Form.Group>
                 </div>
 
@@ -102,6 +93,7 @@ const LoginPage = () => {
                     Sign in
                   </Button>
                 </div>
+                <p className="error-message">{errorMessage}</p>
               </Form>
             </div>
           </div>

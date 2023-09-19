@@ -83,3 +83,12 @@
   border: 1px solid #3e3e3e !important;
   border-radius: 3px !important;
 }
+
+.error-message {
+  color: red;
+  padding: 20px !important;
+}
+
+.regular-color {
+  color: #3e3e3e !important;
+}
