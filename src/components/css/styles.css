@@ -1,0 +1,85 @@
+.main-container {
+  background-color: #fbfbfb;
+  height: 100vh;
+}
+
+.image-container {
+  background-color: #fbfbfb;
+  height: 100vh;
+}
+
+.user-with-key {
+  /* width: 300.49px; */
+  height: 509.74px;
+  top: 80.26px;
+  left: 891.32px;
+}
+
+.custom-input {
+  border: 2px solid #3e3e3e !important;
+  background: #fff;
+  /* width: 280px !important; */
+  height: 48px !important;
+  flex-shrink: 0;
+  border-radius: 0px !important;
+}
+
+.input-holder {
+  padding-top: 15px;
+}
+
+.checkbox-style {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000;
+  background: #f2f2f2;
+}
+.checkbox-style :after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.custom-login-btn {
+  background: #3c3c3c !important;
+  border-radius: 0px !important;
+  width: 280px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.custom-login-btn:hover {
+  background: #737374 !important;
+  border-radius: 0px !important;
+  width: 280px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.country-card {
+  border: 2px solid #3e3e3e !important;
+  background: #fff !important;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0px !important;
+  width: 80% !important;
+  margin: 15px 0px;
+}
+
+.central-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-image-style {
+  background-color: #737374;
+  border: 1px solid #3e3e3e !important;
+  border-radius: 3px !important;
+}
