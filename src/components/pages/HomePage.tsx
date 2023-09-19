@@ -74,13 +74,16 @@ const HomePage = () => {
         <Col xs={12} lg={12}>
           <Nav fill variant="underline" defaultActiveKey="/home">
             <Nav.Item>
-              <Nav.Link>Countries</Nav.Link>
+              <Nav.Link eventKey="disabled" disabled className="regular-color">
+                Countries
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link></Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
+                className="regular-color"
                 eventKey="link-2"
                 onClick={() => sortCountryByRegion("all")}
               >
@@ -89,6 +92,7 @@ const HomePage = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
+                className="regular-color"
                 eventKey="link-3"
                 onClick={() => sortCountryByRegion("asia")}
               >
@@ -97,6 +101,7 @@ const HomePage = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
+                className="regular-color"
                 eventKey="link-4"
                 onClick={() => sortCountryByRegion("europe")}
               >

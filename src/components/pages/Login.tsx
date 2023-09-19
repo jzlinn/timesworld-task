@@ -35,8 +35,8 @@ const LoginPage = () => {
 
   return (
     <Container fluid className="main-container">
-      <Row>
-        <Col xs={0} lg={1}></Col>
+        <Row className="justify-content-md-center">
+        <Col xs={1} lg={1}></Col>
         <Col xs={10} lg={4} className="central-div">
           <div className="login-card central-div">
             <h4>Sign In</h4>
